@@ -28,6 +28,7 @@ form1.addEventListener("submit", function(event){
         let msgPlace = document.querySelector("form:first-of-type fieldset:nth-of-type(2)")
         inputError.innerHTML = "Veuillez rentrer un email valide";
         inputError.classList.add("erreur");
+        emailInput.classList.add("erreur");
         msgPlace.appendChild(inputError);
         formOK = false; 
    }
@@ -39,6 +40,7 @@ form1.addEventListener("submit", function(event){
         let msgPlace = document.querySelector("form:first-of-type fieldset:nth-of-type(3)")
         inputError.innerHTML = "Veuillez rentrer un mot de passe valide";
         inputError.classList.add("erreur");
+        passInput.classList.add("erreur")
         msgPlace.appendChild(inputError);
         formOK = false; 
    }
@@ -48,10 +50,25 @@ form1.addEventListener("submit", function(event){
         let msgPlace = document.querySelector("form:first-of-type fieldset:last-of-type")
         inputError.innerHTML = "Les mots de passe ne correspondent pas";
         inputError.classList.add("erreur");
+        passCheckInput.classList.add("erreur")
         msgPlace.appendChild(inputError);
         formOK = false; 
    }
 
 
 
+});
+
+
+form2.addEventListener("submit", function(event) {
+     event.preventDefault();
+    let divPro = document.querySelectorAll("prodev")
+    if(divPro.value !== true) {
+        let inputError = document.createElement("p");
+        let msgPlace = document.querySelector("#etudes");
+        inputError.classList.add("erreur");
+        inputError.innerHTML = "Veuillez selectionner une option";
+        msgPlace.appendChild(inputError);
+        formOK = false;
+    }
 });
