@@ -6,7 +6,7 @@ let form3 = document.getElementById("hobbies");
 let formOK = true;
 
 
-
+//Event error first form
 
 form1.addEventListener("submit", function(event){
     event.preventDefault();
@@ -82,6 +82,7 @@ form1.addEventListener("submit", function(event){
 
 });
 
+//Event error second form
 
 form2.addEventListener("submit", function(event) {
      event.preventDefault();
