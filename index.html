@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Work+Sans:ital,wght@0,200;0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><h1>COMPLETEZ VOTRE PROFIL</h1></header>
+<main>
+<section class="info active" id="form1">
+  <header><h2>INFORMATIONS DE CONNEXION</h2></header>
+    <form id="informations">
+        <label for="user">Nom d'utilisateur</label>
+            <input type="text" name="user"/>
+         <label for="email">Email</label>
+            <input type="email" name="email"/>
+        <label for="password">Mot de passe</label>
+            <input type="password" name="password"/>
+        <label for="checkpass">Confirmer le mot de passe</label>
+            <input type="password" name="checkpass"/>
+        <input type="submit" value="Enregistrer"/>
+    </form>
+    <button class="fakeBtn">Submit</button>
+</section>
+<section class="pro" id="form2">
+    <header><h2>PROFIL PROFESSIONNEL</h2></header>
+            <form class="pro">
+                    <h3>Niveau d'études</h3>
+                <div class="pro fieldset-padding" id="etudes">
+                    <fieldset>
+                        <input type="radio" name="level" id="capbep"/>
+                    <label for="capbep">CAP-BEP</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="level" id="bac"/>
+                    <label for="bac">Bac</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="level" id="bac2"/>
+                    <label for="bac2">Bac +2</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="level" id="bac3"/>
+                    <label for="bac3">Bac +3</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="level" id="bac5"/>
+                    <label for="bac5">Bac +5</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="level" id="bac7"/>
+                    <label for="bac7">Bac +7</label>
+                    </fieldset>
+                </div>
+                    <h3>Profil de développeur</h3>
+                <div class="pro fieldset-padding" id="profil">
+                    <fieldset>
+                        <input type="radio" name="prodev" id="backend"/>
+                    <label for="backend">Dev Web Backend</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="prodev" id="frontend"/>
+                    <label for="frontend">Dev Web Frontend</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="prodev" id="fullstack"/>
+                    <label for="fullstack">Dev Web Fullstack</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="prodev" id="gaming"/>
+                    <label for="gaming">Dev Jeux vidéo</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="prodev" id="software"/>
+                    <label for="software">Dev Logiciel</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="prodev" id="mobile"/>
+                    <label for="mobile">Dev Mobile</label>
+                    </fieldset>
+                </div>
+                <input type="submit" value="Enregistrer"/>
+            </form>
+            <button class="fakeBtn">Submit</button>
+</section>
+<section class="hobbies" id="form3">
+    <header><h2>Centres d'intérêt</h2></header>
+            <form action="" class="hobbies">
+                <div id="hobbies" class="fieldset-padding">
+                <fieldset>
+                <input type="checkbox" name="interet" id="banque"/>
+                    <label for="banque">Banque</label>
+                </fieldset>
+                <fieldset>
+                <input type="checkbox" name="interet" id="com"/>
+                    <label for="com">Communication</label>
+                </fieldset>
+                <fieldset>
+                <input type="checkbox" name="interet" id="pub"/>
+                    <label for="pub">Publicité</label>
+                </fieldset>
+                <fieldset>
+                <input type="checkbox" name="interet" id="def"/>
+                    <label for="def">Défense</label>
+                </fieldset>
+                <fieldset>
+                <input type="checkbox" name="interet" id="finance"/>
+                    <label for="finance">Finance</label>
+                </fieldset>
+                <fieldset>
+                <input type="checkbox" name="interet" id="education"/>
+                    <label for="education">Education</label>
+                </fieldset>
+                <fieldset>
+                <input type="checkbox" name="interet" id="santé"/>
+                    <label for="santé">Santé</label>
+                </fieldset>
+                <fieldset>
+                <input type="checkbox" name="interet" id="politique"/>
+                    <label for="politique">Politique</label>
+                </fieldset>
+                </div>
+                <input type="submit" value="Enregistrer"/>
+            </form>
+            <button class="fakeBtn">Submit</button>
+</section>
+</main>
+<footer></footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Général */
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+:root {
+--bleu : #3a61ef;  
+--bleu-foncé : #253879;  
+--bleu-clair : #dfe4f7;  
+--blanc-cassé : #eafbf0;  
+--blanc : #ffffff;  
+--rouge : #d9022f;  
+--vert : #1e7062;  
+--noir : #0d0f0f;
+--form-font: 'Work Sans', sans-serif;
+--font-base: 'Oswald', sans-serif;
+}
+
+
+body {
+font-family: var(--form-font); 
+margin:0;
+padding:0;
+width:100vw;
+height:100vh;
+}
+
+body > header {
+    text-align:center;
+    text-transform:uppercase;
+    color: var(--bleu-foncé);
+    font-weight:bolder;
+    margin:10px;
+}
+
+h1, h2 {
+    font-family: var(--font-base);
+    padding:0;
+    }
+
+h3 {
+    margin:12px;
+}
+
+section > header {
+    color: var(--blanc);
+    background-color: var(--bleu);
+    text-transform:uppercase;
+    text-align:center;
+    margin:0;
+    padding:3vh 0;
+}
+/* -------GRID-------- */
+
+main {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:100%;
+}
+
+section {
+    text-align:left;
+    border: 1px solid grey;
+    opacity:0.3;
+}
+
+
+#etudes, #profil, #hobbies {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+/*  -------SECTION ACTIVE POUR EVENTLISTENER------------ */
+section.active {
+    opacity:1;
+}
+
+/* -------FORMULAIRE--------- */
+form {
+    text-align:left;
+    grid-row: 2/3;
+    padding:2vh 2vw;
+}
+
+#informations > input:not(:last-of-type) {
+    padding:1vh 1vw;
+    background-color:var(--bleu-clair);
+    width:100%;
+    margin:2vh 0;
+    border-style:none;
+}
+    
+.fieldset-padding > fieldset {
+    padding:2vh 1vw;
+    
+    
+}
+
+fieldset {
+    border:0;
+}
+
+/* ------INPUT FORMULAIRE----- */
+
+form > input:last-of-type {
+    margin-top: 8vh;
+    padding: 1vh 2vw;
+    max-width: fit-content;
+    background-color: var(--bleu);
+    color: var(--blanc);
+    border-style: none;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+/* ------FAKE BUTTON POUR TEST JS------- */
+
+.fakeBtn {
+    color:red;
+    text-transform:uppercase;
+    background-color:grey;
+    border-style: 1px solid red;
+}
+
+
+
+/* ------FOOTER------ */
+footer {
+    background-color: var(--bleu-foncé);
+    padding: 2vh;
+}
