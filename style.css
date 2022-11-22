@@ -63,7 +63,6 @@ main {
 section {
     text-align:left;
     border: 1px solid grey;
-    opacity:0.3;
 }
 
 
@@ -75,8 +74,18 @@ section {
 
 
 /*  -------SECTION ACTIVE POUR EVENTLISTENER------------ */
-section.active {
+/*section.active {
     opacity:1;
+}
+
+/* --------CLASS POUR LE EVENTLISTENER ERREUR---------- */
+
+.erreur:input {
+    border-color:red ;
+}
+
+.erreur:p {
+    color: red;
 }
 
 /* -------FORMULAIRE--------- */
@@ -102,6 +111,15 @@ form {
 
 fieldset {
     border:0;
+    
+}
+
+body > main > section:first-of-type > form > fieldset > input {
+    margin: 2vh 0;
+    padding: 1vh 1vw;
+    width: 100%;
+    background-color: var(--bleu-clair);
+    border-style: none;   
 }
 
 /* ------INPUT FORMULAIRE----- */
@@ -119,12 +137,12 @@ form > input:last-of-type {
 
 /* ------FAKE BUTTON POUR TEST JS------- */
 
-.fakeBtn {
+/*.fakeBtn {
     color:red;
     text-transform:uppercase;
     background-color:grey;
     border-style: 1px solid red;
-}
+}*/
 
 
 

@@ -1,42 +1,57 @@
-/*let formulaire1 = document.getElementById("form1");
-let formulaire2 = document.getElementById("form2");
-let formulaire3 = document.getElementById("form3");
+let pass = document.getElementById("pass");
+let checkpass = document.getElementById("checkpass");
+let form1 = document.getElementById("informations");
+let form2 = document.getElementById("pro");
+let form3 = document.getElementById("hobbies");
+let formOK = true;
 
-formulaire1.addEventListener("click", function(){
-    formulaire1.style.opacity = 1;
-    formulaire2.style.opacity = 0.35;
-    formulaire3.style.opacity = 0.35;
 
-})
-
-formulaire2.addEventListener("click", function(){
-    formulaire2.style.opacity = 1;
-    formulaire1.style.opacity = 0.35;
-    formulaire3.style.opacity = 0.35;
-
-})
-
-formulaire3.addEventListener("click", function(){
-    formulaire3.style.opacity = 1;
-    formulaire1.style.opacity = 0.35;
-    formulaire2.style.opacity = 0.35;
-
-}) */
-
-let section = document.querySelectorAll("body > main > section");
-let fakeBtn = document.querySelectorAll("body > main > section > .fakeBtn");
-
-for (let i = 0; i < section.length; i++) {
-    fakeBtn[i].addEventListener("click", function(){
+form1.addEventListener("submit", function(event){
+    event.preventDefault();
+    let userInput = document.querySelector("#user");
+    if(userInput.value === ""){
+        let inputError = document.createElement("p");
+        let msgPlace = document.querySelector("form:first-of-type fieldset:first-of-type")
+        inputError.innerHTML = "Veuillez rentrer un nom d'utilisateur";
+        inputError.classList.add("erreur");
+        userInput.classList.add("erreur");
+        msgPlace.appendChild(inputError);
+        formOK = false; 
         
-        if((i+1) < section.length){
-            section[i].classList.remove("active");
-            section[i+1].classList.add("active");
-        }else{
-            section[i].classList.remove("active");
-            section[0].classList.add("active");
+    }
+    
+    let emailInput = document.querySelector("#email");
+    let emailSymbol = emailInput.value.indexOf("@" , 0);
+    let emailDot = emailInput.value.indexOf("." , 0);
+   if(!(emailSymbol > 0 && emailDot > 0) && !(emailSymbol < emailDot)) {
+        let inputError = document.createElement("p");
+        let msgPlace = document.querySelector("form:first-of-type fieldset:nth-of-type(2)")
+        inputError.innerHTML = "Veuillez rentrer un email valide";
+        inputError.classList.add("erreur");
+        msgPlace.appendChild(inputError);
+        formOK = false; 
+   }
+   
+   let passInput = document.querySelector("#mdp");
+   let passCheckInput = document.querySelector("#checkpass");
+   if(passInput.value === ""){
+        let inputError = document.createElement("p");
+        let msgPlace = document.querySelector("form:first-of-type fieldset:nth-of-type(3)")
+        inputError.innerHTML = "Veuillez rentrer un mot de passe valide";
+        inputError.classList.add("erreur");
+        msgPlace.appendChild(inputError);
+        formOK = false; 
+   }
+   
+   if(passInput.value !== passCheckInput.value) {
+       let inputError = document.createElement("p");
+        let msgPlace = document.querySelector("form:first-of-type fieldset:last-of-type")
+        inputError.innerHTML = "Les mots de passe ne correspondent pas";
+        inputError.classList.add("erreur");
+        msgPlace.appendChild(inputError);
+        formOK = false; 
+   }
 
-        }
-    })    
-}
 
+
+});
