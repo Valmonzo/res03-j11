@@ -80,14 +80,19 @@ section {
 
 /* --------CLASS POUR LE EVENTLISTENER ERREUR---------- */
 
-body > main > section > form > fieldset > input.erreur {
+body main  section  form:first-of-type > fieldset  input.erreur{
     border: 1px solid red;
 }
 
-body > main > section > form > fieldset > p.erreur {
+body  main section   p.erreur {
     color: red;
     font-size: 0.8em;
     margin-bottom:1vh;
+}
+
+body main section form span.erreur {
+    color:red;
+    font-size:0.8em;
 }
 
 /* -------FORMULAIRE--------- */
@@ -116,7 +121,7 @@ fieldset {
     
 }
 
-body > main > section:first-of-type > form > fieldset > input {
+body > main > section:first-of-type > form > fieldset input {
     margin: 2vh 0;
     padding: 1vh 1vw;
     width: 100%;
