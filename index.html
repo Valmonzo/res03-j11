@@ -11,24 +11,31 @@
 <body>
 <header><h1>COMPLETEZ VOTRE PROFIL</h1></header>
 <main>
-<section class="info active" id="form1">
+<section class="info" id="form1">
   <header><h2>INFORMATIONS DE CONNEXION</h2></header>
-    <form id="informations">
+    <form action="" id="informations">
+        <fieldset>
         <label for="user">Nom d'utilisateur</label>
-            <input type="text" name="user"/>
+            <input type="text" name="user" id="user"/>
+        </fieldset>
+        <fieldset>
          <label for="email">Email</label>
-            <input type="email" name="email"/>
+            <input type="email" name="email" id="email"/>
+        </fieldset>
+        <fieldset>
         <label for="password">Mot de passe</label>
-            <input type="password" name="password"/>
+            <input type="password" name="password" id="mdp"/>
+        </fieldset>
+        <fieldset>
         <label for="checkpass">Confirmer le mot de passe</label>
-            <input type="password" name="checkpass"/>
-        <input type="submit" value="Enregistrer"/>
+            <input type="password" name="checkpass" id="checkpass"/>
+        </fieldset>
+        <input type="submit" value="Enregistrer" id="btn1"/>
     </form>
-    <button class="fakeBtn">Submit</button>
 </section>
 <section class="pro" id="form2">
     <header><h2>PROFIL PROFESSIONNEL</h2></header>
-            <form class="pro">
+            <form  action="" class="pro" id="pro">
                     <h3>Niveau d'études</h3>
                 <div class="pro fieldset-padding" id="etudes">
                     <fieldset>
@@ -59,7 +66,7 @@
                     <h3>Profil de développeur</h3>
                 <div class="pro fieldset-padding" id="profil">
                     <fieldset>
-                        <input type="radio" name="prodev" id="backend"/>
+                        <input type="radio" name="prodev" id="backend" required/>
                     <label for="backend">Dev Web Backend</label>
                     </fieldset>
                     <fieldset>
@@ -83,13 +90,12 @@
                     <label for="mobile">Dev Mobile</label>
                     </fieldset>
                 </div>
-                <input type="submit" value="Enregistrer"/>
+                <input type="submit" value="Enregistrer" id="btn2"/>
             </form>
-            <button class="fakeBtn">Submit</button>
 </section>
 <section class="hobbies" id="form3">
     <header><h2>Centres d'intérêt</h2></header>
-            <form action="" class="hobbies">
+            <form action="" class="hobbies" id="hobbies">
                 <div id="hobbies" class="fieldset-padding">
                 <fieldset>
                 <input type="checkbox" name="interet" id="banque"/>
@@ -124,9 +130,8 @@
                     <label for="politique">Politique</label>
                 </fieldset>
                 </div>
-                <input type="submit" value="Enregistrer"/>
+                <input type="submit" value="Enregistrer" id="btn3"/>
             </form>
-            <button class="fakeBtn">Submit</button>
 </section>
 </main>
 <footer></footer>
